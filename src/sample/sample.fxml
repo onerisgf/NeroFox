@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="880.0" stylesheets="main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #708090;" BorderPane.alignment="CENTER">
+         <Button mnemonicParsing="false" onAction="#volta" text="Voltar" />
+         <Button mnemonicParsing="false" onAction="#avanca" text="Avançar" />
+
+          <TextField fx:id="url" onKeyPressed="#enter" prefHeight="25.0" prefWidth="421.0" />
+
+          <!-- É PRECISO DEFINIR O onAction PARA INTERAGIR COM O BOTÃO-->
+          <Button fx:id="btn_go" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#go" text="GO" />
+         <Button fx:id="btnHome" mnemonicParsing="false" onAction="#home" text="HOME" />
+          <Pane prefHeight="30.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <children>
+               <ComboBox fx:id="cbFavoritos" layoutX="3.0" layoutY="3.0" prefHeight="25.0" prefWidth="102.0" />
+               <Button fx:id="iconFav" layoutX="114.0" layoutY="3.0" mnemonicParsing="false" onAction="#addFav" prefHeight="25.0" prefWidth="48.0" text="ADD" />
+               <Button fx:id="btremove" layoutX="171.0" layoutY="3.0" mnemonicParsing="false" onAction="#btremove" prefHeight="25.0" prefWidth="64.0" text="REMOVE" />
+            </children></Pane>
+        
+
+      </ToolBar>
+   </top>
+   <center>
+      <WebView fx:id="web" prefHeight="500.0" prefWidth="880.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
